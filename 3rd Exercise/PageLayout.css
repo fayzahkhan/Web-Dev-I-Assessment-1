@@ -1,0 +1,70 @@
+/* First we gotta center the header and nav, and make it look like the target */
+header {
+    text-align: center;  
+    background-color: #ffffff;   
+    padding: 20px;   /* Adds some space around the header content */
+    font-size: 40px;
+    text-align: center;
+}
+
+nav a {   /* underline and color for the links! :3 */  
+    text-decoration: underline;   
+    color: blue;   
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* This is to make the intro section look like the target with text on the left and cow on the right */
+.intro-section {
+    display: flex;   /* This puts text and cow next to each other */
+    align-items: center;   
+    background-color: #e0e0e0;   
+}
+
+.text-content {
+    background-color: #e0e0e0;
+    flex: 1;
+    width: 900%;
+    margin-left: 24px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.intro-image {
+    float: right;
+    width: 400px;
+    margin-left: 24px;
+    margin-bottom: 10px;
+}
+
+/* The gallery grid styling! :3 */
+.gallery-grid {
+    display: flex;   /* this makes the gallery a flex container */
+    flex-wrap: wrap;   /* this will let the images wrap to the next line when they run out of space */
+    gap: 0;   /* This will make sure there is no gap between the images, making them look like a grid */
+}
+
+.gallery-grid img, 
+.gallery-grid video {
+    height: 300px;   /* This sets a fixed height for all media items so that it looks clean and professional */
+    flex-grow: 1;   /* This makes sure all images and videos grow to fill the available space in their row */
+    object-fit: cover;   /* this will crop the images and the video so that it doesn't look squashed */
+}
+
+/* This will center the whole page and limit the width of the content */
+body {
+    background-color: #ffffff;   /* The grey background from the screenshot */
+    margin: 0;   /* This removes the default margin around the body */
+    display: flex;   /* This makes the body a flex container */
+    flex-direction: column;   /* This stacks the header, main, and footer vertically */
+    align-items: center;   /* this centers the content horizontally */
+}
+
+header, main {
+    background-color: #e0e0e0; /* This makes the header and main content have a white background like in the example */
+    width: 100%;   /* This makes the header and main content take up the full width of the page */
+    max-width: 1000px;   /* This limits the width to make it look better on large screens */
+    padding: 20px;  /* This adds some padding around the content */
+    box-sizing: border-box;  /* this makes sure the padding doesn't add to the total width */
+}
