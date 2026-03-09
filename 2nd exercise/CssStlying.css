@@ -1,0 +1,53 @@
+/* BasicPage Styling :D */
+body {
+    background-color: #d1d5db;   /* background Styling! :3 */
+    font-family: Arial, sans-serif;   
+    line-height: 1.6;   
+    margin: 0;   /* this removes the default margin around the body */
+    padding: 40px 20px;   
+}
+
+/*  width and centering for the box :D */
+.content-wrapper {
+    background-color: white;  
+    max-width: 600px;   /* this limits the width of the content */
+    margin: 0 auto;   /* this will center the box horizontally */
+    padding: 40px;   
+    border-radius: 20px;   /* Rounded corners for the white container! :3 */
+}
+
+/* Typography styling :D */
+.main-title {
+    color: #09bb03;  
+    font-size: 5rem;   
+    text-align: center;   /* this will center the main title */
+    margin-top: 0;   
+    font-weight: bold;   
+}
+
+.sub-title {
+    color: #09bb03;   
+    font-size: 3rem;   
+    text-align: center;   /* this will center the sub title */
+    font-weight: bold;   
+}
+
+/* This is the 'Did you know?' box! :3 */
+.highlight-box {
+    background-color: #09bb03;   
+    color: rgb(255, 255, 255);  
+    padding: 20px;   
+    border-radius: 15px;   /* This will give the box rounded corners! */
+    margin: 30px 0;   /* This will add some space above and below the box. */
+}
+
+.highlight-box h3 {
+    margin-top: 0;   
+    font-size: 1.5rem;   
+}
+
+/* Making the 'Did you know?' heading bigger! :3 */
+.h3 {
+    font-size: 34px;  
+    font-weight: bold; 
+}
