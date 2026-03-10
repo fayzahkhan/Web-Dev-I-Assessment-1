@@ -1,3 +1,4 @@
+/* basic page style */
 body {
     background-color: #f4f4f4;
     color: #333;
@@ -7,61 +8,71 @@ body {
     padding: 0;
 }
 
+/* center the main parts of the page */
 header, main, footer {
     max-width: 700px;
     margin: 20px auto;
-    background-color: rgb(255, 91, 211);
+    background-color: rgb(255, 91, 211); /* pink background */
     padding: 20px;
 }
 
+/* header settings */
 header {
     text-align: center;
-    border-bottom: none; 
+    border-bottom: none; /* removed line under header */
 }
 
+/* nav links */
 nav a {
     margin: 10px;
     color: #0066cc;
     font-weight: bold;
 }
 
+/* each photo card section */
 .photo-card {
-    margin-bottom: 50px;
+    margin-bottom: 50px; /* space between cards */
     text-align: center;
 }
 
+/* all images */
 img {
-    max-width: 100%;
+    max-width: 100%; /* stops image overflow */
     height: auto;
-    border: none; /* removed image border */
+    border: none; /* no border around images */
 }
 
+/* button style */
 button {
     background-color: #222;
     color: white;
     padding: 10px 20px;
     border: none;
-    cursor: pointer;
+    cursor: pointer; /* shows pointer on hover */
     font-size: 20px;
 }
 
+/* remove default focus outline */
 button:focus {
-    outline: none; /* removed focus outline border */
+    outline: none;
 }
 
+/* hover effect */
 button:hover {
     background-color: #444;
 }
 
+/* shopping cart icon */
 .cart-icon {
     width: 40px;
     height: auto;
     display: block;
-    margin-left: auto;
-    border: none; /* removes border around cart icon */
+    margin-left: auto; /* move to right side */
+    border: none;
     outline: none;
 }
 
+/* paragraph text */
 p {
     font-weight: bold;
 }
