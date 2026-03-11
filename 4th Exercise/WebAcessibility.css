@@ -19,7 +19,7 @@ header, main, footer {
 /* header settings */
 header {
     text-align: center;
-    border-bottom: none; /* removed line under header */
+    border-bottom: none; 
 }
 
 /* nav links */
@@ -52,7 +52,7 @@ button {
     font-size: 20px;
 }
 
-/* remove default focus outline */
+
 button:focus {
     outline: none;
 }
