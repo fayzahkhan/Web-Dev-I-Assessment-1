@@ -1,0 +1,250 @@
+/* Basic Page Styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Main content wrapper - Clean white card */
+.content-wrapper {
+    background-color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.content-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+/* Typography Styling */
+.main-title {
+    color: #ffb7c7;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ff9eb5, #ffb7c7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub-title {
+    color: #ffb7c7;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f5e8ed;
+    display: inline-block;
+    width: auto;
+}
+
+/* Article text styling */
+article p {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+/* Highlight box - Modern card design */
+.highlight-box {
+    background: linear-gradient(135deg, #ff9eb5, #ffb7c7);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 0 10px 25px rgb(252, 188, 211);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-box::before {
+    content: "💪";
+    position: absolute;
+    font-size: 100px;
+    opacity: 0.1;
+    right: 10px;
+    bottom: -20px;
+    pointer-events: none;
+}
+
+.highlight-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgb(252, 188, 211);
+}
+
+.highlight-box h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.highlight-box h3::before {
+    content: "🏋️‍♂️";
+    font-size: 2rem;
+}
+
+.highlight-box p {
+    color: white;
+    margin-bottom: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Section dividers */
+article h2 {
+    position: relative;
+}
+
+article h2:not(:first-of-type) {
+    margin-top: 50px;
+}
+
+/* First paragraph special styling */
+article p:first-of-type {
+    font-size: 1.1rem;
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Last paragraph styling */
+article p:last-of-type {
+    margin-bottom: 0;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 15px;
+    border-left: 4px solid #ffb7c7;
+    font-weight: 500;
+    color: #ffb7c7;
+}
+
+/* Button-like effect for call to action */
+article p:last-of-type {
+    transition: all 0.3s ease;
+}
+
+article p:last-of-type:hover {
+    background-color: #e8f5e9;
+    transform: translateX(5px);
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 30px 25px;
+        max-width: 90%;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .sub-title {
+        font-size: 1.5rem;
+    }
+    
+    .highlight-box {
+        padding: 20px;
+    }
+    
+    .highlight-box h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    .content-wrapper {
+        padding: 20px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .sub-title {
+        font-size: 1.3rem;
+    }
+    
+    article p {
+        font-size: 1rem;
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+    background-color: #ffb7c7;
+    color: white;
+}
+
+/* Add some fun icons to headings */
+.sub-title::before {
+    content: "⚡";
+    margin-right: 10px;
+    font-size: 1.8rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sub-title:last-of-type::before {
+    content: "🚀";
+}
+
+/* Simple animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+article {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Clean list styling (in case you add lists later) */
+ul, ol {
+    padding-left: 25px;
+    margin: 20px 0;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #4a5568;
+}
