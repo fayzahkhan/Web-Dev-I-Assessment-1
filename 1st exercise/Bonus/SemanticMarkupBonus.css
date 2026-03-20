@@ -1,0 +1,237 @@
+/* Basic CSS styling */
+
+body {
+    font-family: 'Segoe UI', 'Quicksand', 'Arial', sans-serif; /* Soft, friendly fonts */
+    line-height: 1.6;
+    color: #5a4a4a; /* Soft brownish-pink text */
+    max-width: 800px;
+    margin: 20px auto;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe9ef 100%); /* Soft pink gradient background */
+    padding: 20px;
+    border-radius: 25px; /* Rounded corners for a softer look */
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2); /* Soft pink shadow */
+}
+
+/* Headings styling */
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    color: #ff9eb5; /* Pretty pink */
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(255, 158, 181, 0.2);
+    text-align: center;
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+}
+
+h2 {
+    color: #ffb7c7; /* Soft pink */
+    border-bottom: 2px dotted #ffd9e2; /* Dotted line for cuteness */
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #ffb7c7;
+    font-size: 1.3em;
+    margin-top: 15px;
+}
+
+/* Navigation links styling - sweet and simple */
+nav {
+    text-align: center;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #ff9eb5;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color: #ff7f9e;
+    transform: translateY(-2px);
+}
+
+/* Decorative underline on hover */
+nav a::after {
+    content: '♡';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 12px;
+}
+
+nav a:hover::after {
+    opacity: 1;
+}
+
+/* Header and footer styling */
+header, footer {
+    background: linear-gradient(135deg, #ffeef2 0%, #ffe4ea 100%);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.15);
+}
+
+header {
+    border-bottom: 3px solid #ffd9e2;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #ff9eb5;
+    border-top: 2px solid #ffd9e2;
+}
+
+/* Aside section - cute tip box */
+aside {
+    background: #fff5f8;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 20px;
+    border-left: 5px solid #ffb7c7;
+    border-right: 2px solid #ffd9e2;
+    border-top: 2px solid #ffd9e2;
+    border-bottom: 2px solid #ffd9e2;
+    box-shadow: 0 5px 15px rgba(255, 183, 199, 0.1);
+    font-style: italic;
+    color: #b28b8b;
+    transition: transform 0.3s ease;
+}
+
+aside:hover {
+    transform: scale(1.02);
+}
+
+/* Lists styling */
+ul, ol {
+    margin-bottom: 20px;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+/* Custom bullet points for unordered list */
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li::before {
+    content: '♡';
+    color: #ffb7c7;
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+}
+
+/* Custom numbers for ordered list */
+ol {
+    list-style-type: none;
+    counter-reset: cookie-counter;
+}
+
+ol li {
+    counter-increment: cookie-counter;
+    position: relative;
+    padding-left: 35px;
+}
+
+ol li::before {
+    content: counter(cookie-counter) '.';
+    color: #ff9eb5;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    width: 25px;
+    text-align: right;
+}
+
+/* Article styling - soft card look */
+article {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(255, 158, 181, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Main content spacing */
+main {
+    margin: 20px 0;
+}
+
+/* Add cute heart dividers */
+section {
+    position: relative;
+}
+
+section:not(:last-child)::after {
+    content: '✧  ✧  ✧';
+    display: block;
+    text-align: center;
+    color: #ffd9e2;
+    font-size: 14px;
+    margin: 25px 0 15px 0;
+    letter-spacing: 5px;
+}
+
+/* Special styling for the recipe description */
+article > p:first-of-type {
+    color: #b28b8b;
+    font-size: 1.1em;
+    text-align: center;
+    border-bottom: 2px dotted #ffd9e2;
+    border-top: 2px dotted #ffd9e2;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+/* Make images (if added later) rounded */
+img {
+    border-radius: 20px;
+}
+
+/* Selection color - cute pink when text is highlighted */
+::selection {
+    background-color: #ffd9e2;
+    color: #ff9eb5;
+}
+
+/* Scrollbar styling - for extra cuteness */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffeef2;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd9e2;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffb7c7;
+}
