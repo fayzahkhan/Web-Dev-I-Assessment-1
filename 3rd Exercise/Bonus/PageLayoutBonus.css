@@ -1,0 +1,308 @@
+/* Page background + default font */
+body {
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe4ed 100%);
+    margin: 0;
+    font-family: 'Segoe UI', 'Georgia', 'Times New Roman', serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main container in middle soft pink card */
+.wrapper {
+    width: 950px;
+    margin: 25px auto;
+    background: #fffafc;
+    padding: 30px 0 0 0;
+    border-radius: 35px;
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.wrapper:hover {
+    transform: translateY(-5px);
+}
+
+/* Header area */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 25px;
+}
+
+/* Big title pretty pink */
+h1 {
+    font-size: 65px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    color: #ff9eb5;
+    text-shadow: 3px 3px 6px rgba(255, 158, 181, 0.2);
+    letter-spacing: 2px;
+    font-family: 'Segoe UI', 'Georgia', serif;
+}
+
+/* Nav bar */
+nav {
+    text-align: center;
+    padding: 10px 25px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* Nav links cute and girly */
+nav a {
+    color: #ffb7c7;
+    font-size: 18px;
+    margin: 0 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #ff9eb5;
+    transform: translateY(-2px);
+}
+
+/* Decorative dots under nav links */
+nav a::after {
+    content: '♡';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 12px;
+}
+
+nav a:hover::after {
+    opacity: 1;
+}
+
+/* Intro section with image + text */
+.intro-section {
+    margin-bottom: 35px;
+    overflow: hidden;
+    padding: 0 25px;
+}
+
+/* Image container */
+.intro-image {
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+/* Actual intro image rounded corners */
+.intro-image img {
+    width: 390px;
+    height: auto;
+    display: block;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(255, 158, 181, 0.2);
+    transition: transform 0.3s ease;
+    border: 3px solid #ffe4ed;
+}
+
+.intro-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Text paragraphs soft and readable */
+.text p {
+    font-size: 17px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #b28b8b;
+    font-family: 'Segoe UI', 'Georgia', serif;
+}
+
+/* Empty div used for spacing decorative */
+.gallery-grid {
+    margin: 20px 25px 15px 25px;
+    clear: both;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd9e2, transparent);
+}
+
+/* Gallery section */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 25px 25px 25px;
+    width: calc(100% - 50px);
+}
+
+/* Each row in gallery */
+.row {
+    display: flex;
+    margin: 0 0 15px 0;
+    padding: 0;
+    width: 100%;
+    gap: 15px;
+    line-height: 0;
+    font-size: 0;
+}
+
+/* Images + video styling */
+.row video,
+.row img {
+    background: #ffeef2;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2);
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.row video:hover,
+.row img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 158, 181, 0.3);
+}
+
+/* Video style */
+.videolol {
+    width: calc(60% - 7.5px);
+    height: 300px;
+    background: #fce4ec;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* First image in row */
+.image1 {
+    width: calc(40% - 7.5px);
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Smaller image */
+.image2 {
+    width: calc(35% - 7.5px);
+    height: 260px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Bigger image */
+.image3 {
+    width: calc(65% - 7.5px);
+    height: 260px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1000px) {
+    .wrapper {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    
+    .intro-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 800px) {
+    .intro-section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .intro-image {
+        float: none;
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+    
+    .intro-image img {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .videolol,
+    .image1,
+    .image2,
+    .image3 {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 200px;
+    }
+    
+    nav a {
+        margin: 0 15px;
+        font-size: 16px;
+    }
+}
+
+/* Selection color - pretty pink */
+::selection {
+    background-color: #ffd9e2;
+    color: #ff9eb5;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff0f5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd9e2;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffb7c7;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add cute decorative elements to the wrapper */
+.wrapper::before {
+    content: '✧  ✧  ✧';
+    display: block;
+    text-align: center;
+    color: #ffd9e2;
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-top: -15px;
+    padding-bottom: 10px;
+}
+
+.wrapper::after {
+    content: '♡';
+    display: block;
+    text-align: center;
+    color: #ffd9e2;
+    font-size: 20px;
+    padding: 20px 0 25px 0;
+}
